@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultBot - Your AI That Never Sleeps</title>
+    <meta name="description" content="The most powerful AI assistant for Mac. Autonomous agents, local privacy, iOS control. Your AI. Your Rules. Your Vault.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%237C3AED'/><stop offset='100%' style='stop-color:%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-family='system-ui' font-size='50' font-weight='bold' fill='white' text-anchor='middle'>V</text></svg>">
+</head>
+<body>
+    <!-- Gradient Background -->
+    <div class="gradient-bg"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#7C3AED"/>
+                                <stop offset="100%" style="stop-color:#06B6D4"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+                        <text x="20" y="28" font-family="Inter" font-size="20" font-weight="bold" fill="white" text-anchor="middle">V</text>
+                    </svg>
+                </div>
+                <span>VaultBot</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#agents">Agents</a>
+                <a href="#security">Security</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://docs.vaultbot.ai" target="_blank">Docs</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-ghost">Sign In</a>
+                <a href="#download" class="btn btn-primary">
+                    <span>Download</span>
+                    <span class="btn-badge">Free</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                <span>Now with Autonomous Agents</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Your AI</span> That
+                <br>Never Sleeps
+            </h1>
+            <p class="hero-subtitle">
+                The most powerful AI assistant for Mac. Set tasks, go to bed, 
+                wake up to results. Approve actions from your iPhone.
+                <strong>Your data never leaves your Mac.</strong>
+            </p>
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-large btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download for Mac
+                </a>
+                <a href="#demo" class="btn btn-large btn-ghost">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    Watch Demo
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">3,800+</span>
+                    <span class="stat-label">Skills</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Private</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">Autonomous</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="app-window">
+                <div class="window-header">
+                    <div class="window-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="window-title">VaultBot</div>
+                    <div class="window-badge">⌘⇧V</div>
+                </div>
+                <div class="window-content">
+                    <div class="search-bar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <span class="typing-text">Deploy my app to production overnight...</span>
+                        <span class="cursor"></span>
+                    </div>
+                    <div class="suggestions">
+                        <div class="suggestion active">
+                            <div class="suggestion-icon">🚀</div>
+                            <div class="suggestion-content">
+                                <div class="suggestion-title">Create Autonomous Agent</div>
+                                <div class="suggestion-desc">Run tests, build, deploy while you sleep</div>
+                            </div>
+                            <div class="suggestion-shortcut">↵</div>
+                        </div>
+                        <div class="suggestion">
+                            <div class="suggestion-icon">💬</div>
+                            <div class="suggestion-content">
+                                <div class="suggestion-title">Chat with VaultBot</div>
+                                <div class="suggestion-desc">Get instant AI assistance</div>
+                            </div>
+                        </div>
+                        <div class="suggestion">
+                            <div class="suggestion-icon">🔧</div>
+                            <div class="suggestion-content">
+                                <div class="suggestion-title">Browse 3,800+ Skills</div>
+                                <div class="suggestion-desc">Extend with community plugins</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-card card-agent">
+                <div class="card-header">
+                    <span class="status-dot running"></span>
+                    <span>Agent Running</span>
+                </div>
+                <div class="card-progress">
+                    <div class="progress-bar" style="--progress: 67%"></div>
+                </div>
+                <div class="card-detail">Deploying to production...</div>
+            </div>
+            <div class="floating-card card-phone">
+                <div class="phone-notch"></div>
+                <div class="phone-notification">
+                    <div class="notif-icon">🔔</div>
+                    <div class="notif-content">
+                        <div class="notif-title">Approval Needed</div>
+                        <div class="notif-desc">Agent wants to push to main</div>
+                    </div>
+                </div>
+                <div class="phone-actions">
+                    <button class="phone-btn deny">Deny</button>
+                    <button class="phone-btn approve">Approve</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="logos-section">
+        <p class="logos-title">Trusted by developers at</p>
+        <div class="logos-grid">
+            <div class="logo-item">Apple</div>
+            <div class="logo-item">Google</div>
+            <div class="logo-item">Meta</div>
+            <div class="logo-item">Stripe</div>
+            <div class="logo-item">Vercel</div>
+            <div class="logo-item">Linear</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-header">
+            <span class="section-badge">Features</span>
+            <h2 class="section-title">Everything you need.<br><span class="gradient-text">Nothing you don't.</span></h2>
+            <p class="section-desc">VaultBot combines the speed of a launcher with the power of autonomous AI agents.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card large">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <path d="M9 9h6v6H9z"/>
+                        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+                    </svg>
+                </div>
+                <h3>Autonomous Agents</h3>
+                <p>Set a task, go to sleep. VaultBot agents work in the background, handle errors, and notify you when done. Like having a developer on call 24/7.</p>
+                <div class="feature-demo">
+                    <div class="agent-timeline">
+                        <div class="timeline-item done">
+                            <span class="timeline-dot"></span>
+                            <span>Analyzing codebase</span>
+                            <span class="timeline-time">2m ago</span>
+                        </div>
+                        <div class="timeline-item done">
+                            <span class="timeline-dot"></span>
+                            <span>Running tests</span>
+                            <span class="timeline-time">1m ago</span>
+                        </div>
+                        <div class="timeline-item active">
+                            <span class="timeline-dot"></span>
+                            <span>Deploying to staging</span>
+                            <span class="timeline-time">Now</span>
+                        </div>
+                        <div class="timeline-item pending">
+                            <span class="timeline-dot"></span>
+                            <span>Creating PR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 8v4M12 16h.01"/>
+                    </svg>
+                </div>
+                <h3>100% Private</h3>
+                <p>Your data never leaves your Mac. Use local AI with Ollama, or connect to cloud when you choose. You're in control.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="5" y="2" width="14" height="20" rx="2"/>
+                        <path d="M12 18h.01"/>
+                    </svg>
+                </div>
+                <h3>iOS Companion</h3>
+                <p>Approve dangerous actions from your phone. Get push notifications. Remote control your Mac from anywhere.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon orange">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <h3>3,800+ Skills</h3>
+                <p>From git automation to smart home control. Browse the marketplace, install with one click, or build your own.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                        <line x1="12" y1="2" x2="12" y2="22"/>
+                    </svg>
+                </div>
+                <h3>Code Assistant</h3>
+                <p>Inline completions, multi-file context, refactoring. Like Cursor, but integrated with everything else.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon pink">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>Git Automation</h3>
+                <p>Agents create branches, commit with context, and open PRs. Review and merge from your phone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="section-header">
+            <span class="section-badge">Why VaultBot</span>
+            <h2 class="section-title">Not just a launcher.<br><span class="gradient-text">An AI that works for you.</span></h2>
+        </div>
+        
+        <div class="comparison-table">
+            <div class="comparison-header">
+                <div class="comparison-col feature-col"></div>
+                <div class="comparison-col">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%237C3AED'/><stop offset='100%' style='stop-color:%2306B6D4'/></linearGradient></defs><rect width='40' height='40' rx='10' fill='url(%23g)'/><text x='20' y='28' font-family='system-ui' font-size='20' font-weight='bold' fill='white' text-anchor='middle'>V</text></svg>" alt="VaultBot" class="comparison-logo">
+                    <span>VaultBot</span>
+                </div>
+                <div class="comparison-col other">Raycast</div>
+                <div class="comparison-col other">Cursor</div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Autonomous Agents</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">100% Local/Private Option</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">iOS Companion App</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="partial">Basic</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Remote Mac Control</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Approval from Phone</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Skills/Extensions</div>
+                <div class="comparison-col"><span class="value">3,800+</span></div>
+                <div class="comparison-col other"><span class="value">1,000+</span></div>
+                <div class="comparison-col other"><span class="value">Limited</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Git Auto-PR</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="partial">Basic</span></div>
+            </div>
+            <div class="comparison-row">
+                <div class="comparison-col feature-col">Code Completion</div>
+                <div class="comparison-col"><span class="check">✓</span></div>
+                <div class="comparison-col other"><span class="cross">✗</span></div>
+                <div class="comparison-col other"><span class="check">✓</span></div>
+            </div>
+            <div class="comparison-row highlight">
+                <div class="comparison-col feature-col">Starting Price</div>
+                <div class="comparison-col"><span class="value price">Free</span></div>
+                <div class="comparison-col other"><span class="value">$8/mo</span></div>
+                <div class="comparison-col other"><span class="value">$20/mo</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="security-section">
+        <div class="security-content">
+            <span class="section-badge">Security</span>
+            <h2 class="section-title">Your vault.<br><span class="gradient-text">Your rules.</span></h2>
+            <p class="section-desc">Enterprise-grade security that you control. Not us.</p>
+            
+            <div class="security-features">
+                <div class="security-item">
+                    <div class="security-icon">🔐</div>
+                    <div class="security-text">
+                        <h4>Biometric Authentication</h4>
+                        <p>Touch ID / Face ID for sensitive operations</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🔒</div>
+                    <div class="security-text">
+                        <h4>AES-256 Encryption</h4>
+                        <p>All data encrypted at rest with CryptoKit</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">📋</div>
+                    <div class="security-text">
+                        <h4>Full Audit Trail</h4>
+                        <p>Every action logged, exportable for compliance</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🛡️</div>
+                    <div class="security-text">
+                        <h4>Path & Command Protection</h4>
+                        <p>Blocks dangerous operations by default</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">⚡</div>
+                    <div class="security-text">
+                        <h4>Superuser Mode</h4>
+                        <p>Full control when you need it, with audit</p>
+                    </div>
+                </div>
+                <div class="security-item">
+                    <div class="security-icon">🌐</div>
+                    <div class="security-text">
+                        <h4>Zero Cloud Required</h4>
+                        <p>Works 100% offline with local AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="security-visual">
+            <div class="vault-animation">
+                <div class="vault-ring ring-1"></div>
+                <div class="vault-ring ring-2"></div>
+                <div class="vault-ring ring-3"></div>
+                <div class="vault-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <span class="section-badge">Testimonials</span>
+            <h2 class="section-title">Loved by <span class="gradient-text">power users</span></h2>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "Finally, an AI that actually works while I sleep. Set up a deployment agent before bed, woke up to a PR ready for review. Game changer."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <div class="author-name">Sarah Kim</div>
+                        <div class="author-title">Senior Engineer, Stripe</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card featured">
+                <div class="testimonial-content">
+                    "The privacy angle sold me. I work on sensitive codebases - can't send that to the cloud. VaultBot with Ollama is perfect."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JC</div>
+                    <div class="author-info">
+                        <div class="author-name">James Chen</div>
+                        <div class="author-title">CTO, Stealth Startup</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    "Approving git pushes from my iPhone while at dinner with my wife. She thinks I'm checking notifications. I'm deploying to prod. 😅"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div class="author-info">
+                        <div class="author-name">Mike Rodriguez</div>
+                        <div class="author-title">Indie Hacker</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header">
+            <span class="section-badge">Pricing</span>
+            <h2 class="section-title">Simple pricing.<br><span class="gradient-text">Powerful features.</span></h2>
+            <p class="section-desc">Start free, upgrade when you need more.</p>
+        </div>
+        
+        <div class="pricing-toggle">
+            <span class="toggle-label active">Monthly</span>
+            <label class="toggle">
+                <input type="checkbox" id="billing-toggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">Yearly <span class="save-badge">Save 20%</span></span>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Free</h3>
+                    <p>For getting started</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">$0</span>
+                    <span class="price-period">forever</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><span class="check">✓</span> Core launcher features</li>
+                    <li><span class="check">✓</span> 50 AI messages/day</li>
+                    <li><span class="check">✓</span> 3 autonomous agents</li>
+                    <li><span class="check">✓</span> Local AI (Ollama)</li>
+                    <li><span class="check">✓</span> 100+ skills</li>
+                    <li><span class="check">✓</span> Basic security</li>
+                </ul>
+                <a href="#download" class="btn btn-outline btn-full">Download Free</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Pro</h3>
+                    <p>For serious developers</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount" data-monthly="$9" data-yearly="$7">$9</span>
+                    <span class="price-period">/month</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><span class="check">✓</span> Everything in Free</li>
+                    <li><span class="check">✓</span> Unlimited AI messages</li>
+                    <li><span class="check">✓</span> Unlimited agents</li>
+                    <li><span class="check">✓</span> Claude, GPT-4, Gemini</li>
+                    <li><span class="check">✓</span> All 3,800+ skills</li>
+                    <li><span class="check">✓</span> iOS companion app</li>
+                    <li><span class="check">✓</span> Priority support</li>
+                </ul>
+                <a href="#download" class="btn btn-primary btn-full">Start Pro Trial</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Lifetime</h3>
+                    <p>One-time purchase</p>
+                </div>
+                <div class="pricing-price">
+                    <span class="price-amount">$149</span>
+                    <span class="price-period">once</span>
+                </div>
+                <ul class="pricing-features">
+                    <li><span class="check">✓</span> Everything in Pro</li>
+                    <li><span class="check">✓</span> Lifetime updates</li>
+                    <li><span class="check">✓</span> Early access features</li>
+                    <li><span class="check">✓</span> Direct support line</li>
+                    <li><span class="check">✓</span> Name in credits</li>
+                </ul>
+                <a href="#download" class="btn btn-outline btn-full">Get Lifetime</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="download-content">
+            <h2 class="section-title">Ready to work smarter?</h2>
+            <p class="section-desc">Download VaultBot and experience AI that actually helps.</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="download-btn mac">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <div class="download-text">
+                        <span class="download-label">Download for</span>
+                        <span class="download-platform">macOS</span>
+                    </div>
+                </a>
+                <a href="#" class="download-btn ios">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    <div class="download-text">
+                        <span class="download-label">Download for</span>
+                        <span class="download-platform">iOS</span>
+                    </div>
+                </a>
+            </div>
+            
+            <p class="download-note">Requires macOS 13+ • Apple Silicon or Intel • iOS 16+</p>
+        </div>
+        
+        <div class="download-visual">
+            <div class="keyboard">
+                <div class="key cmd">⌘</div>
+                <div class="key shift">⇧</div>
+                <div class="key v">V</div>
+            </div>
+            <p class="keyboard-hint">Press anywhere to summon</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" fill="none">
+                            <defs>
+                                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7C3AED"/>
+                                    <stop offset="100%" style="stop-color:#06B6D4"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="40" height="40" rx="10" fill="url(#footerLogoGrad)"/>
+                            <text x="20" y="28" font-family="Inter" font-size="20" font-weight="bold" fill="white" text-anchor="middle">V</text>
+                        </svg>
+                    </div>
+                    <span>VaultBot</span>
+                </a>
+                <p class="footer-tagline">Your AI. Your Rules. Your Vault.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">Changelog</a>
+                    <a href="#">Roadmap</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Skills Store</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 VaultBot. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="#" aria-label="Discord">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
