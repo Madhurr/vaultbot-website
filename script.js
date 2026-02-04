@@ -1,32 +1,39 @@
 // ============================================
-// VaultBot Website - Interactive JavaScript
+// VaultBot Website - Complete Interactive JS
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all components
     initNavigation();
-    initTypingAnimation();
+    initTypingAnimations();
     initPricingToggle();
     initScrollAnimations();
-    initParallax();
+    initSkillsFilter();
+    initCopyButtons();
+    initHotkeyDemo();
     initCounters();
+    initMobileMenu();
 });
 
 // Navigation scroll effect
 function initNavigation() {
     const nav = document.querySelector('.nav');
+    let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        const currentScroll = window.scrollY;
+        
+        if (currentScroll > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
+        
+        lastScroll = currentScroll;
     });
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -39,64 +46,64 @@ function initNavigation() {
     });
 }
 
-// Typing animation in hero
-function initTypingAnimation() {
-    const texts = [
-        'Deploy my app to production overnight...',
-        'Write unit tests for the UserService...',
-        'Refactor this code to use async/await...',
-        'Create a PR with these changes...',
-        'Search for security vulnerabilities...'
-    ];
-    
-    const typingElement = document.querySelector('.typing-text');
-    if (!typingElement) return;
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let isPaused = false;
-    
-    function type() {
-        const currentText = texts[textIndex];
+// Multiple typing animations
+function initTypingAnimations() {
+    // Hero search typing
+    const demoText = document.querySelector('.demo-text');
+    if (demoText) {
+        const phrases = [
+            'deploy my app overnight',
+            'create a PR with tests',
+            'refactor UserService.swift',
+            'analyze security vulnerabilities',
+            'update all dependencies'
+        ];
         
-        if (isPaused) {
-            setTimeout(type, 2000);
-            isPaused = false;
-            isDeleting = true;
-            return;
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isPaused = false;
+        
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isPaused) {
+                setTimeout(type, 2000);
+                isPaused = false;
+                isDeleting = true;
+                return;
+            }
+            
+            if (isDeleting) {
+                demoText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                }
+            } else {
+                demoText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                
+                if (charIndex === currentPhrase.length) {
+                    isPaused = true;
+                }
+            }
+            
+            const speed = isDeleting ? 30 : 60;
+            setTimeout(type, speed);
         }
         
-        if (isDeleting) {
-            typingElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            
-            if (charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-        } else {
-            typingElement.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            
-            if (charIndex === currentText.length) {
-                isPaused = true;
-            }
-        }
-        
-        const speed = isDeleting ? 30 : 50;
-        setTimeout(type, speed);
+        setTimeout(type, 1000);
     }
-    
-    setTimeout(type, 1000);
 }
 
 // Pricing toggle (monthly/yearly)
 function initPricingToggle() {
     const toggle = document.getElementById('billing-toggle');
     const priceElements = document.querySelectorAll('.price-amount[data-monthly]');
-    const monthlyLabel = document.querySelector('.toggle-label:first-of-type');
-    const yearlyLabel = document.querySelector('.toggle-label:last-of-type');
+    const labels = document.querySelectorAll('.toggle-label');
     
     if (!toggle) return;
     
@@ -107,8 +114,14 @@ function initPricingToggle() {
             el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
         });
         
-        monthlyLabel.classList.toggle('active', !isYearly);
-        yearlyLabel.classList.toggle('active', isYearly);
+        labels.forEach(label => {
+            const period = label.dataset.period;
+            if (period === 'monthly') {
+                label.classList.toggle('active', !isYearly);
+            } else if (period === 'yearly') {
+                label.classList.toggle('active', isYearly);
+            }
+        });
     });
 }
 
@@ -122,47 +135,105 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                entry.target.classList.add('reveal', 'active');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    // Observe elements
-    document.querySelectorAll('.feature-card, .testimonial-card, .pricing-card, .security-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    // Observe various elements
+    const animatedElements = document.querySelectorAll(
+        '.feature-card, .agent-feature, .example-card, .skill-card, ' +
+        '.security-card, .ios-feature, .testimonial-card, .pricing-card, ' +
+        '.workflow-step, .code-feature, .faq-item'
+    );
+    
+    animatedElements.forEach((el, index) => {
+        el.style.transitionDelay = `${index * 0.05}s`;
         observer.observe(el);
     });
-    
-    // Add CSS for animation
-    const style = document.createElement('style');
-    style.textContent = `
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
 }
 
-// Parallax effect on hero
-function initParallax() {
-    const heroVisual = document.querySelector('.hero-visual');
-    if (!heroVisual) return;
+// Skills category filter
+function initSkillsFilter() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const skillCards = document.querySelectorAll('.skill-card');
     
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        if (scrolled < window.innerHeight) {
-            heroVisual.style.transform = `translateY(${scrolled * 0.2}px)`;
-        }
+    if (!categoryBtns.length) return;
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const category = btn.dataset.category;
+            
+            // Filter cards
+            skillCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeIn 0.3s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
     });
+}
+
+// Copy buttons
+function initCopyButtons() {
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const text = btn.dataset.copy;
+            
+            try {
+                await navigator.clipboard.writeText(text);
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
+        });
+    });
+}
+
+// Hotkey demo animation
+function initHotkeyDemo() {
+    const keys = document.querySelectorAll('.key-large');
+    
+    // Simulate key press animation
+    function pressKeys() {
+        keys.forEach((key, index) => {
+            setTimeout(() => {
+                key.style.transform = 'translateY(3px)';
+                key.style.boxShadow = '0 3px 0 var(--bg-primary)';
+                
+                setTimeout(() => {
+                    key.style.transform = '';
+                    key.style.boxShadow = '';
+                }, 150);
+            }, index * 100);
+        });
+    }
+    
+    // Press keys periodically
+    if (keys.length) {
+        pressKeys();
+        setInterval(pressKeys, 4000);
+    }
 }
 
 // Animated counters
 function initCounters() {
-    const counters = document.querySelectorAll('.stat-value');
+    const counters = document.querySelectorAll('[data-count]');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -177,21 +248,15 @@ function initCounters() {
 }
 
 function animateCounter(element) {
-    const text = element.textContent;
-    const hasPlus = text.includes('+');
-    const hasPercent = text.includes('%');
-    const isInfinity = text.includes('∞');
-    
-    if (isInfinity) return;
-    
-    const target = parseInt(text.replace(/[^0-9]/g, ''));
-    if (isNaN(target)) return;
-    
-    let current = 0;
+    const target = parseInt(element.dataset.count);
     const duration = 2000;
     const steps = 60;
     const increment = target / steps;
     const stepDuration = duration / steps;
+    let current = 0;
+    
+    const valueEl = element.querySelector('.stat-value');
+    if (!valueEl) return;
     
     const timer = setInterval(() => {
         current += increment;
@@ -200,89 +265,86 @@ function animateCounter(element) {
             clearInterval(timer);
         }
         
-        let display = Math.floor(current).toLocaleString();
-        if (hasPlus) display += '+';
-        if (hasPercent) display += '%';
-        
-        element.textContent = display;
+        valueEl.textContent = Math.floor(current).toLocaleString() + '+';
     }, stepDuration);
 }
 
-// Interactive keyboard
-document.querySelectorAll('.key').forEach(key => {
-    key.addEventListener('mousedown', () => {
-        key.style.transform = 'translateY(4px)';
-        key.style.boxShadow = '0 0 0 var(--bg-primary)';
-    });
-    
-    key.addEventListener('mouseup', () => {
-        key.style.transform = 'translateY(0)';
-        key.style.boxShadow = '0 4px 0 var(--bg-primary)';
-    });
-});
-
-// Mobile menu toggle (if needed)
+// Mobile menu
 function initMobileMenu() {
-    const menuButton = document.querySelector('.mobile-menu-button');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     
-    if (!menuButton || !navLinks) return;
+    if (!menuBtn || !navLinks) return;
     
-    menuButton.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
     });
 }
 
-// Progress bar animation for floating card
-function animateProgress() {
-    const progressBar = document.querySelector('.progress-bar');
-    if (!progressBar) return;
+// Progress bar animation
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-bar');
     
-    let progress = 67;
-    let direction = 1;
-    
-    setInterval(() => {
-        progress += direction * 0.5;
-        if (progress >= 95) direction = -1;
-        if (progress <= 40) direction = 1;
+    progressBars.forEach(bar => {
+        let width = 67;
+        let direction = 1;
         
-        progressBar.style.setProperty('--progress', `${progress}%`);
-    }, 100);
+        setInterval(() => {
+            width += direction * 0.5;
+            if (width >= 85) direction = -1;
+            if (width <= 55) direction = 1;
+            bar.style.width = `${width}%`;
+        }, 100);
+    });
 }
 
-animateProgress();
+animateProgressBars();
 
-// Add hover effect to comparison rows
-document.querySelectorAll('.comparison-row').forEach(row => {
-    row.addEventListener('mouseenter', () => {
-        row.style.background = 'rgba(124, 58, 237, 0.05)';
+// Parallax on floating cards
+function initParallax() {
+    const floatingCards = document.querySelectorAll('.floating-card');
+    
+    window.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.clientX) / 50;
+        const y = (window.innerHeight / 2 - e.clientY) / 50;
+        
+        floatingCards.forEach((card, index) => {
+            const factor = (index + 1) * 0.5;
+            card.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+        });
     });
-    row.addEventListener('mouseleave', () => {
-        if (!row.classList.contains('highlight')) {
-            row.style.background = 'transparent';
-        }
-    });
-});
+}
 
-// Smooth reveal for sections
-const sections = document.querySelectorAll('section');
-const revealSection = (entries, observer) => {
+// Only on desktop
+if (window.innerWidth > 1024) {
+    initParallax();
+}
+
+// Testimonials infinite scroll (duplicate for seamless loop)
+function initTestimonialsScroll() {
+    const track = document.querySelector('.testimonials-grid');
+    if (!track || window.innerWidth <= 768) return;
+    
+    const cards = track.innerHTML;
+    track.innerHTML = cards + cards; // Duplicate for seamless loop
+}
+
+initTestimonialsScroll();
+
+// Intersection observer for section headers
+const sectionHeaders = document.querySelectorAll('.section-header');
+const headerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('section-visible');
+            entry.target.style.animation = 'fadeIn 0.6s ease forwards';
         }
     });
-};
+}, { threshold: 0.3 });
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-    threshold: 0.15
-});
+sectionHeaders.forEach(header => headerObserver.observe(header));
 
-sections.forEach(section => {
-    sectionObserver.observe(section);
-});
-
-// Console easter egg
+// Easter egg console
 console.log(`
 %c██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗██████╗  ██████╗ ████████╗
 %c██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝██╔══██╗██╔═══██╗╚══██╔══╝
@@ -293,16 +355,78 @@ console.log(`
 
 %c🔐 Your AI. Your Rules. Your Vault.
 
-%cWant to work on something cool? We're hiring!
-%chttps://vaultbot.ai/careers
+%c✨ 65+ Swift files | 27,000+ lines | 3,800+ skills
+
+%c🚀 Built with love for developers who demand privacy.
+
+%c📱 macOS + iOS native apps available now!
 `, 
-'color: #7C3AED',
-'color: #8B5CF6',
-'color: #A78BFA',
-'color: #06B6D4',
-'color: #22D3EE',
-'color: #67E8F9',
-'color: #888; font-size: 14px;',
-'color: #666; font-size: 12px;',
-'color: #7C3AED; font-size: 12px;'
+'color: #7C3AED; font-weight: bold',
+'color: #8B5CF6; font-weight: bold',
+'color: #A78BFA; font-weight: bold',
+'color: #06B6D4; font-weight: bold',
+'color: #22D3EE; font-weight: bold',
+'color: #67E8F9; font-weight: bold',
+'color: #888; font-size: 14px; font-weight: bold',
+'color: #7C3AED; font-size: 12px',
+'color: #666; font-size: 12px',
+'color: #06B6D4; font-size: 12px'
 );
+
+// Smooth reveal on page load
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Animate hero elements
+    const heroContent = document.querySelector('.hero-content');
+    const heroVisual = document.querySelector('.hero-visual');
+    
+    if (heroContent) {
+        heroContent.style.animation = 'fadeIn 0.8s ease forwards';
+    }
+    if (heroVisual) {
+        heroVisual.style.animation = 'fadeIn 1s ease 0.3s forwards';
+        heroVisual.style.opacity = '0';
+    }
+});
+
+// Add loaded styles
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .nav-links.mobile-open {
+        display: flex !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(10, 10, 15, 0.98);
+        padding: var(--space-xl);
+        border-bottom: 1px solid var(--border-color);
+        gap: var(--space-md);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+`;
+document.head.appendChild(style);
