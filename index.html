@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VaultBot - Your AI That Never Sleeps</title>
-    <meta name="description" content="The most powerful AI assistant for Mac. Autonomous agents, 3,800+ skills, iOS companion, 100% private.">
+    <title>SupaDev — Your AI Dev Team. On Your Mac.</title>
+    <meta name="description" content="SupaDev: The most powerful AI developer tool for Mac. Multi-agent pipelines, full native IDE, 3,800+ skills, 8 AI providers. 100% private. Your AI dev team, running locally.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%237C3AED'/><stop offset='100%' style='stop-color:%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-family='system-ui' font-size='50' font-weight='bold' fill='white' text-anchor='middle'>V</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%237C3AED'/><stop offset='100%' style='stop-color:%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-family='system-ui' font-size='50' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="#" class="logo">
-                <div class="logo-icon">V</div>
-                <span>VaultBot</span>
+                <div class="logo-icon">S</div>
+                <span>SupaDev</span>
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
+                <a href="#ide">IDE</a>
+                <a href="#pipelines">Pipelines</a>
                 <a href="#agents">Agents</a>
-                <a href="#security">Security</a>
                 <a href="#pricing">Pricing</a>
                 <a href="https://docs.vaultbot.ai" target="_blank">Docs</a>
             </div>
             <div class="nav-actions">
-                <a href="https://github.com/vaultbot/vaultbot" target="_blank" class="btn-text">GitHub</a>
+                <a href="https://github.com/Madhurr/vaultbot" target="_blank" class="btn-text">GitHub</a>
                 <a href="#download" class="btn-primary">Download Free</a>
             </div>
             <button class="menu-btn" onclick="toggleMenu()">
@@ -40,8 +41,9 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#features" onclick="toggleMenu()">Features</a>
+        <a href="#ide" onclick="toggleMenu()">IDE</a>
+        <a href="#pipelines" onclick="toggleMenu()">Pipelines</a>
         <a href="#agents" onclick="toggleMenu()">Agents</a>
-        <a href="#security" onclick="toggleMenu()">Security</a>
         <a href="#pricing" onclick="toggleMenu()">Pricing</a>
         <a href="https://docs.vaultbot.ai" target="_blank">Docs</a>
         <a href="#download" class="btn-primary" onclick="toggleMenu()">Download Free</a>
@@ -51,34 +53,34 @@
     <section class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <div class="badge">Now with Autonomous Agents</div>
-            <h1>Your AI That<br><span class="gradient">Never Sleeps</span></h1>
-            <p class="hero-text">The most powerful AI assistant for Mac. Set tasks before bed, wake up to results. Approve actions from your iPhone. <strong>100% private.</strong></p>
+            <div class="badge">🚀 Multi-Agent Pipelines Are Here</div>
+            <h1>Your AI Dev Team.<br><span class="gradient">On Your Mac.</span></h1>
+            <p class="hero-text">Ship faster with autonomous AI agents that research, architect, code, test, and create PRs — all while you sleep. <strong>100% private. Zero cloud lock-in.</strong></p>
             <div class="hero-buttons">
                 <a href="#download" class="btn-primary btn-large">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    Download for Mac
+                    Download for macOS
                 </a>
-                <a href="https://www.youtube.com/watch?v=demo" target="_blank" class="btn-secondary btn-large">Watch Demo</a>
+                <a href="#features" class="btn-secondary btn-large">See What's Inside ↓</a>
             </div>
             <div class="hero-stats">
                 <div class="stat"><strong>3,800+</strong><span>Skills</span></div>
                 <div class="stat"><strong>100%</strong><span>Private</span></div>
-                <div class="stat"><strong>24/7</strong><span>Autonomous</span></div>
+                <div class="stat"><strong>Multi-Agent</strong><span>Pipelines</span></div>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&q=80" alt="VaultBot App" class="app-screenshot">
+            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1200&q=80" alt="SupaDev IDE" class="app-screenshot">
             <div class="floating-card card-1">
                 <div class="card-dot green"></div>
-                <span>Agent Running</span>
+                <span>Pipeline Running</span>
                 <div class="card-progress"><div class="card-bar"></div></div>
             </div>
             <div class="floating-card card-2">
                 <div class="card-icon">📱</div>
                 <div class="card-text">
                     <strong>Approval Needed</strong>
-                    <span>Push to main?</span>
+                    <span>Merge to main?</span>
                 </div>
             </div>
         </div>
@@ -86,13 +88,16 @@
 
     <!-- Logos -->
     <section class="logos">
-        <p>Works with your favorite AI models</p>
+        <p>8 AI Providers — Use the best model for every task</p>
         <div class="logos-row">
             <span>🧠 Claude</span>
             <span>🤖 GPT-4</span>
             <span>💎 Gemini</span>
-            <span>🦙 Ollama</span>
+            <span>🌊 DeepSeek</span>
+            <span>🌬️ Mistral</span>
             <span>⚡ Groq</span>
+            <span>🦙 Ollama</span>
+            <span>+ More</span>
         </div>
     </section>
 
@@ -100,49 +105,280 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-label">Features</div>
-            <h2>Everything you need.<br><span class="gradient">Nothing you don't.</span></h2>
+            <h2>Everything you need to ship.<br><span class="gradient">Nothing that slows you down.</span></h2>
             
             <div class="features-grid">
                 <div class="feature-card large">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Autonomous Agents</h3>
-                    <p>Set a task, go to sleep. Agents work in the background, handle errors, retry failed steps, and notify you when done.</p>
+                    <div class="feature-icon">🔗</div>
+                    <h3>Multi-Agent Pipelines</h3>
+                    <p>Researcher → Architect → Coder → QA → Human Review. Full PR-model workflow where agents chain automatically. Set a task, go to sleep, wake up to a PR.</p>
                     <div class="feature-visual">
-                        <div class="agent-step done">✓ Running tests</div>
-                        <div class="agent-step done">✓ Building app</div>
-                        <div class="agent-step active">● Deploying...</div>
-                        <div class="agent-step">○ Creating PR</div>
+                        <div class="agent-step done">✓ Researcher analyzed codebase</div>
+                        <div class="agent-step done">✓ Architect designed solution</div>
+                        <div class="agent-step done">✓ Coder implemented changes</div>
+                        <div class="agent-step active">● QA running 247 tests...</div>
+                        <div class="agent-step">○ Human Review (you)</div>
                     </div>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>100% Private</h3>
-                    <p>Your data never leaves your Mac. Use local AI with Ollama, or connect to cloud when you choose.</p>
+                    <div class="feature-icon">💻</div>
+                    <h3>Full Native IDE</h3>
+                    <p>8,000+ lines of Swift. Tree-sitter syntax highlighting, ⌥+Click docs, Symbol Outline, Project Search, Git Status, Problems panel, Bookmarks, Run Panel.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Mission Control</h3>
+                    <p>Monitor all agents in real-time. Filter by Active/Done. Auto-select when agent needs attention. macOS native notifications.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Intelligent Mode</h3>
+                    <p>15-dimension prompt router auto-selects the best AI model for every task. Bill comparison shows you save ~80% vs raw API costs.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>iOS Companion</h3>
-                    <p>Approve actions from your phone. Get push notifications. Control your Mac from anywhere.</p>
+                    <h3>iOS Companion App</h3>
+                    <p>Dashboard, remote desktop, approvals, widgets, and Live Activities. Control your dev pipeline from anywhere.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">⌨️</div>
-                    <h3>Global Hotkey</h3>
-                    <p>Press ⌘⇧V anywhere on your Mac. Spotlight-style launcher that does way more than search.</p>
+                    <h3>Warp-Style AI Terminal</h3>
+                    <p class="coming-soon-text">Block-based output, ⌘+K shell AI, ghost autocomplete, error detection + auto-fix. <span class="coming-soon-badge">Coming Soon</span></p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Code Assistant</h3>
-                    <p>Multi-file context, inline completions, 6 assist modes. Like Cursor, integrated with everything.</p>
+                    <div class="feature-icon">💬</div>
+                    <h3>Channels Everywhere</h3>
+                    <p>WhatsApp, Telegram, Discord, Slack, Signal, iMessage. Talk to your AI dev team from wherever you already are.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Smart Home Control</h3>
+                    <p>Control lights, devices, and HomeKit accessories from your AI assistant. Because your dev environment is your entire life.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Agent Builder</h3>
+                    <p>6 specialized agent types. Create custom agents with personality, tools, and event routing. Your AI, your rules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDE Section -->
+    <section id="ide" class="ide-section">
+        <div class="container">
+            <div class="section-label">Native IDE</div>
+            <h2>A real IDE.<br><span class="gradient">Not a wrapper.</span></h2>
+            <p class="section-desc">11 Swift files. 8,000+ lines of native macOS code. Built with CodeEditSourceEditor and Tree-sitter — not Electron, not a web view.</p>
+            
+            <div class="ide-showcase">
+                <div class="ide-window">
+                    <div class="ide-titlebar">
+                        <div class="ide-dots"><span></span><span></span><span></span></div>
+                        <span class="ide-title">SupaDev IDE — project/src/main.swift</span>
+                    </div>
+                    <div class="ide-body">
+                        <div class="ide-sidebar">
+                            <div class="ide-sidebar-item active">📁 Explorer</div>
+                            <div class="ide-sidebar-item">🔍 Search</div>
+                            <div class="ide-sidebar-item">🔀 Git</div>
+                            <div class="ide-sidebar-item">⚠️ Problems</div>
+                            <div class="ide-sidebar-item">🔖 Bookmarks</div>
+                            <div class="ide-sidebar-item">▶️ Run</div>
+                            <div class="ide-sidebar-item">📐 Outline</div>
+                        </div>
+                        <div class="ide-editor">
+                            <div class="ide-line"><span class="ln">1</span><span class="kw">import</span> <span class="ty">SwiftUI</span></div>
+                            <div class="ide-line"><span class="ln">2</span></div>
+                            <div class="ide-line"><span class="ln">3</span><span class="kw">struct</span> <span class="ty">ContentView</span>: <span class="ty">View</span> {</div>
+                            <div class="ide-line"><span class="ln">4</span>    <span class="kw">@State private var</span> pipeline = <span class="ty">Pipeline</span>()</div>
+                            <div class="ide-line"><span class="ln">5</span></div>
+                            <div class="ide-line"><span class="ln">6</span>    <span class="kw">var</span> body: <span class="kw">some</span> <span class="ty">View</span> {</div>
+                            <div class="ide-line"><span class="ln">7</span>        <span class="ty">MissionControl</span>(pipeline: pipeline)</div>
+                            <div class="ide-line"><span class="ln">8</span>            .<span class="fn">onAppear</span> { pipeline.<span class="fn">start</span>() }</div>
+                            <div class="ide-line"><span class="ln">9</span>    }</div>
+                            <div class="ide-line"><span class="ln">10</span>}</div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">🔀</div>
-                    <h3>Git Automation</h3>
-                    <p>Auto-commit with smart messages, create PRs from chat, merge from your phone.</p>
+                <div class="ide-features">
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">🌳</span>
+                        <div>
+                            <strong>Tree-sitter Highlighting</strong>
+                            <p>Real syntax parsing, not regex. Fast, accurate, beautiful.</p>
+                        </div>
+                    </div>
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">⌥</span>
+                        <div>
+                            <strong>Quick Documentation</strong>
+                            <p>⌥+Click any symbol for instant docs. Xcode-grade.</p>
+                        </div>
+                    </div>
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">📐</span>
+                        <div>
+                            <strong>Symbol Outline</strong>
+                            <p>Navigate large files instantly. Classes, functions, properties — all mapped.</p>
+                        </div>
+                    </div>
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">🔍</span>
+                        <div>
+                            <strong>Project-Wide Search</strong>
+                            <p>Ripgrep-fast search across your entire codebase.</p>
+                        </div>
+                    </div>
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">🔀</span>
+                        <div>
+                            <strong>Git Integration</strong>
+                            <p>Inline diffs, status indicators, branch management — built in.</p>
+                        </div>
+                    </div>
+                    <div class="ide-feature">
+                        <span class="ide-feature-icon">▶️</span>
+                        <div>
+                            <strong>Run Panel</strong>
+                            <p>Build, test, and run — without leaving the IDE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section id="pipelines" class="pipeline-section">
+        <div class="container">
+            <div class="section-label">Multi-Agent Pipelines</div>
+            <h2>One task in.<br><span class="gradient">A PR out.</span></h2>
+            <p class="section-desc">Agents chain automatically through research, architecture, implementation, testing, and review. You approve the final result.</p>
+            
+            <div class="pipeline-flow">
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">🔬</div>
+                    <h4>Researcher</h4>
+                    <p>Analyzes codebase, reads docs, understands context</p>
+                    <div class="pipeline-arrow">→</div>
+                </div>
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">📐</div>
+                    <h4>Architect</h4>
+                    <p>Designs solution, plans file changes, defines interfaces</p>
+                    <div class="pipeline-arrow">→</div>
+                </div>
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">💻</div>
+                    <h4>Coder</h4>
+                    <p>Implements changes across files, writes clean code</p>
+                    <div class="pipeline-arrow">→</div>
+                </div>
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">🧪</div>
+                    <h4>QA</h4>
+                    <p>Runs tests, validates changes, catches regressions</p>
+                    <div class="pipeline-arrow">→</div>
+                </div>
+                <div class="pipeline-stage final">
+                    <div class="pipeline-icon">👤</div>
+                    <h4>You</h4>
+                    <p>Review the PR, approve with one click</p>
+                </div>
+            </div>
+
+            <div class="pipeline-demo">
+                <div class="pipeline-demo-header">
+                    <div class="demo-dots"><span></span><span></span><span></span></div>
+                    <span>Mission Control — Pipeline #47</span>
+                </div>
+                <div class="pipeline-demo-body">
+                    <div class="pipeline-task">
+                        <span class="pipeline-label">Task:</span> "Add dark mode support to the settings page"
+                    </div>
+                    <div class="pipeline-log">
+                        <div class="log-entry done"><span class="log-time">09:14</span> <span class="log-agent">🔬 Researcher</span> Analyzed 12 files, found ThemeManager.swift and 3 views needing updates</div>
+                        <div class="log-entry done"><span class="log-time">09:16</span> <span class="log-agent">📐 Architect</span> Plan: modify ThemeManager, update SettingsView, add ColorScheme enum</div>
+                        <div class="log-entry done"><span class="log-time">09:22</span> <span class="log-agent">💻 Coder</span> Modified 4 files, added 187 lines, removed 23 lines</div>
+                        <div class="log-entry done"><span class="log-time">09:24</span> <span class="log-agent">🧪 QA</span> All 247 tests passed. No regressions. UI snapshot tests updated.</div>
+                        <div class="log-entry active"><span class="log-time">09:25</span> <span class="log-agent">📋 PR</span> PR #48 created — awaiting your review</div>
+                    </div>
+                    <div class="pipeline-result">
+                        <span>✅ Pipeline completed in 11 minutes</span>
+                        <a href="#" class="btn-primary btn-small">Review PR →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligent Mode Section -->
+    <section class="intelligent-section">
+        <div class="container">
+            <div class="section-label">Intelligent Mode</div>
+            <h2>The right model.<br><span class="gradient">Every time.</span></h2>
+            <p class="section-desc">A 15-dimension prompt router analyzes every request and picks the optimal AI model. You save money. You get better results.</p>
+            
+            <div class="intelligent-grid">
+                <div class="bill-comparison">
+                    <h3>Monthly AI Bill Comparison</h3>
+                    <div class="bill-row">
+                        <div class="bill-label">
+                            <span>Raw API (single model)</span>
+                        </div>
+                        <div class="bill-bar-wrapper">
+                            <div class="bill-bar expensive" style="width: 100%">$147/mo</div>
+                        </div>
+                    </div>
+                    <div class="bill-row">
+                        <div class="bill-label">
+                            <span>SupaDev Intelligent Mode</span>
+                        </div>
+                        <div class="bill-bar-wrapper">
+                            <div class="bill-bar cheap" style="width: 22%">$29/mo</div>
+                        </div>
+                    </div>
+                    <div class="bill-savings">
+                        <span class="savings-badge">~80% savings</span>
+                        <p>Same quality output. Smarter routing.</p>
+                    </div>
+                </div>
+                
+                <div class="intelligent-how">
+                    <h3>How It Works</h3>
+                    <div class="intelligent-steps">
+                        <div class="intel-step">
+                            <div class="intel-num">1</div>
+                            <div>
+                                <strong>Analyze</strong>
+                                <p>15 dimensions — complexity, code type, language, reasoning depth, creativity, context length...</p>
+                            </div>
+                        </div>
+                        <div class="intel-step">
+                            <div class="intel-num">2</div>
+                            <div>
+                                <strong>Route</strong>
+                                <p>Simple refactor? Groq. Complex architecture? Claude. Quick fix? DeepSeek. Creative writing? GPT-4.</p>
+                            </div>
+                        </div>
+                        <div class="intel-step">
+                            <div class="intel-num">3</div>
+                            <div>
+                                <strong>Execute</strong>
+                                <p>Best model for the job, every time. No manual switching. No wasted tokens.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,30 +387,30 @@
     <!-- Agents -->
     <section id="agents" class="agents">
         <div class="container">
-            <div class="section-label">Autonomous Agents</div>
-            <h2>AI that works<br><span class="gradient">while you sleep</span></h2>
-            <p class="section-desc">Like having a developer on call 24/7. Set complex tasks, close your laptop, come back to results.</p>
+            <div class="section-label">Agent Builder</div>
+            <h2>Build your own<br><span class="gradient">AI dev team</span></h2>
+            <p class="section-desc">6 specialized agent types. Create custom agents with personality, tools, and event routing. Your AI team, your rules.</p>
             
             <div class="agents-grid">
                 <div class="agent-demo">
                     <div class="demo-header">
                         <div class="demo-dots"><span></span><span></span><span></span></div>
-                        <span>VaultBot</span>
+                        <span>SupaDev — Pipeline Chat</span>
                     </div>
                     <div class="demo-chat">
-                        <div class="msg user">Deploy my app to production, run all tests first, and create a PR when done. I'm going to sleep.</div>
+                        <div class="msg user">Refactor the auth module to use JWT tokens instead of sessions. Run tests, create a PR when done. I'm heading out.</div>
                         <div class="msg bot">
-                            <div class="bot-avatar">V</div>
+                            <div class="bot-avatar">S</div>
                             <div class="bot-content">
-                                <p>Got it! I'll handle this overnight:</p>
+                                <p>On it. I'm spinning up a full pipeline for this:</p>
                                 <div class="bot-plan">
-                                    <div class="plan-item done">✓ Run test suite (247 passed)</div>
-                                    <div class="plan-item done">✓ Build production bundle</div>
-                                    <div class="plan-item active">● Deploy to staging</div>
-                                    <div class="plan-item">○ Run smoke tests</div>
-                                    <div class="plan-item">○ Create PR for review</div>
+                                    <div class="plan-item done">✓ <strong>Researcher:</strong> Analyzed auth module — 6 files, 4 dependencies</div>
+                                    <div class="plan-item done">✓ <strong>Architect:</strong> JWT strategy planned — minimal breaking changes</div>
+                                    <div class="plan-item done">✓ <strong>Coder:</strong> Modified 6 files, added JWTService.swift</div>
+                                    <div class="plan-item active">● <strong>QA:</strong> Running 312 tests...</div>
+                                    <div class="plan-item">○ <strong>PR:</strong> Will create when tests pass</div>
                                 </div>
-                                <p class="bot-note">💤 Sleep well! I'll notify you when done.</p>
+                                <p class="bot-note">🚀 Go enjoy your evening. I'll ping your iPhone when the PR is ready.</p>
                             </div>
                         </div>
                     </div>
@@ -182,47 +418,47 @@
                 
                 <div class="agent-features">
                     <div class="af-item">
-                        <div class="af-icon">🔄</div>
+                        <div class="af-icon">🔗</div>
                         <div>
-                            <strong>Self-Healing</strong>
-                            <p>Retries with different approaches when something fails</p>
+                            <strong>Auto-Chaining</strong>
+                            <p>Agents hand off to each other automatically. No manual orchestration.</p>
                         </div>
                     </div>
                     <div class="af-item">
                         <div class="af-icon">📱</div>
                         <div>
                             <strong>Mobile Approvals</strong>
-                            <p>Risky actions need your OK via push notification</p>
+                            <p>Risky actions need your OK via push notification on iOS.</p>
                         </div>
                     </div>
                     <div class="af-item">
-                        <div class="af-icon">📋</div>
+                        <div class="af-icon">🔄</div>
                         <div>
-                            <strong>Full Audit Trail</strong>
-                            <p>Every action logged with timestamps</p>
+                            <strong>Self-Healing</strong>
+                            <p>Tests fail? The agent fixes the code and re-runs. Automatically.</p>
                         </div>
                     </div>
                     <div class="af-item">
-                        <div class="af-icon">⚡</div>
+                        <div class="af-icon">🔔</div>
                         <div>
-                            <strong>Parallel Execution</strong>
-                            <p>Run multiple agents on different tasks</p>
+                            <strong>macOS Notifications</strong>
+                            <p>Native alerts when agents need attention or tasks complete.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="use-cases">
-                <h3>What can agents do?</h3>
+                <h3>What can your AI team do?</h3>
                 <div class="cases">
-                    <span>🚀 Deploy overnight</span>
-                    <span>🧪 Run & fix tests</span>
-                    <span>📝 Write docs</span>
-                    <span>🔍 Security audit</span>
-                    <span>📊 Generate reports</span>
-                    <span>🐛 Debug issues</span>
-                    <span>📦 Update deps</span>
+                    <span>🚀 Ship features overnight</span>
+                    <span>🧪 Fix failing tests</span>
+                    <span>📝 Generate docs</span>
+                    <span>🔍 Security audits</span>
+                    <span>🐛 Debug production issues</span>
+                    <span>📦 Update dependencies</span>
                     <span>🔀 Create PRs</span>
+                    <span>🏗️ Scaffold projects</span>
                 </div>
             </div>
         </div>
@@ -242,16 +478,16 @@
                 <div class="skill">📧 Email</div>
                 <div class="skill">📅 Calendar</div>
                 <div class="skill">💡 HomeKit</div>
-                <div class="skill">🎨 DALL-E</div>
                 <div class="skill">🗣️ TTS</div>
                 <div class="skill">📊 Analytics</div>
-                <div class="skill">🔔 Slack</div>
-                <div class="skill">🎵 Spotify</div>
-                <div class="skill">📸 Screenshots</div>
+                <div class="skill">🏠 Smart Home</div>
+                <div class="skill">💬 WhatsApp</div>
+                <div class="skill">📱 Telegram</div>
+                <div class="skill">🎮 Discord</div>
             </div>
             
             <div class="skills-cta">
-                <a href="https://github.com/vaultbot/skills" target="_blank" class="btn-secondary">Browse All Skills</a>
+                <a href="https://github.com/Madhurr/vaultbot" target="_blank" class="btn-secondary">Browse All Skills</a>
                 <a href="https://docs.vaultbot.ai/skills/create" target="_blank" class="btn-text">Build Your Own →</a>
             </div>
         </div>
@@ -261,18 +497,18 @@
     <section id="security" class="security">
         <div class="container">
             <div class="section-label">Security</div>
-            <h2>Your vault.<br><span class="gradient">Your rules.</span></h2>
-            <p class="section-desc">We never see your data. Everything runs on YOUR Mac. That's not marketing—it's architecture.</p>
+            <h2>Your machine.<br><span class="gradient">Your rules.</span></h2>
+            <p class="section-desc">Everything runs on YOUR Mac. That's not a marketing claim — it's the architecture. Zero telemetry. Zero cloud dependency.</p>
             
             <div class="security-grid">
                 <div class="sec-card main">
                     <div class="shield">🛡️</div>
                     <h3>100% Local Processing</h3>
-                    <p>Your code, conversations, and files never leave your Mac unless YOU choose to use a cloud AI model.</p>
+                    <p>Your code, conversations, and files never leave your Mac unless YOU choose to use a cloud AI model. 173 security tests validate every release.</p>
                 </div>
                 <div class="sec-card"><span>🔐</span><strong>Biometric Auth</strong><p>Touch ID / Face ID</p></div>
                 <div class="sec-card"><span>🔒</span><strong>AES-256</strong><p>Encrypted at rest</p></div>
-                <div class="sec-card"><span>📋</span><strong>Audit Trail</strong><p>Every action logged</p></div>
+                <div class="sec-card"><span>📋</span><strong>173 Security Tests</strong><p>Every release, verified</p></div>
                 <div class="sec-card"><span>🚫</span><strong>Path Protection</strong><p>Blocks sensitive dirs</p></div>
                 <div class="sec-card"><span>⚡</span><strong>Superuser Mode</strong><p>Full access with auth</p></div>
                 <div class="sec-card"><span>🌐</span><strong>Offline Mode</strong><p>Works without internet</p></div>
@@ -283,23 +519,33 @@
     <!-- Comparison -->
     <section class="comparison">
         <div class="container">
-            <div class="section-label">Why VaultBot</div>
-            <h2>See the difference</h2>
+            <div class="section-label">Why SupaDev</div>
+            <h2>See the <span class="gradient">difference</span></h2>
             
             <div class="compare-table">
                 <div class="compare-row header">
                     <div class="col"></div>
-                    <div class="col vb"><div class="vb-logo">V</div>VaultBot</div>
-                    <div class="col">Raycast</div>
+                    <div class="col vb"><div class="vb-logo">S</div>SupaDev</div>
                     <div class="col">Cursor</div>
-                    <div class="col">Codex</div>
+                    <div class="col">Windsurf</div>
+                    <div class="col">Copilot</div>
+                    <div class="col">Devin</div>
                 </div>
                 <div class="compare-row">
-                    <div class="col">Autonomous Agents</div>
-                    <div class="col vb">✓</div>
+                    <div class="col">Multi-Agent Pipelines</div>
+                    <div class="col vb">✓ Full</div>
                     <div class="col">✗</div>
                     <div class="col">✗</div>
-                    <div class="col">✓</div>
+                    <div class="col">✗</div>
+                    <div class="col">✓ Cloud</div>
+                </div>
+                <div class="compare-row">
+                    <div class="col">Native IDE</div>
+                    <div class="col vb">✓ Swift</div>
+                    <div class="col">Electron</div>
+                    <div class="col">Electron</div>
+                    <div class="col">Extension</div>
+                    <div class="col">Web</div>
                 </div>
                 <div class="compare-row">
                     <div class="col">100% Local Option</div>
@@ -307,41 +553,55 @@
                     <div class="col">✗</div>
                     <div class="col">✗</div>
                     <div class="col">✗</div>
+                    <div class="col">✗</div>
                 </div>
                 <div class="compare-row">
                     <div class="col">iOS Companion</div>
-                    <div class="col vb">✓ Full</div>
-                    <div class="col">Basic</div>
+                    <div class="col vb">✓ Full App</div>
                     <div class="col">✗</div>
-                    <div class="col">✗</div>
-                </div>
-                <div class="compare-row">
-                    <div class="col">Mobile Approvals</div>
-                    <div class="col vb">✓</div>
                     <div class="col">✗</div>
                     <div class="col">✗</div>
                     <div class="col">✗</div>
                 </div>
                 <div class="compare-row">
-                    <div class="col">Local AI (Ollama)</div>
-                    <div class="col vb">✓</div>
-                    <div class="col">✗</div>
-                    <div class="col">✗</div>
-                    <div class="col">✗</div>
+                    <div class="col">Intelligent Routing</div>
+                    <div class="col vb">✓ 8 Models</div>
+                    <div class="col">Manual</div>
+                    <div class="col">Manual</div>
+                    <div class="col">1 Model</div>
+                    <div class="col">1 Model</div>
                 </div>
                 <div class="compare-row">
-                    <div class="col">Skills/Extensions</div>
+                    <div class="col">Skills / Integrations</div>
                     <div class="col vb">3,800+</div>
-                    <div class="col">1,000+</div>
                     <div class="col">Limited</div>
+                    <div class="col">Limited</div>
+                    <div class="col">Extensions</div>
                     <div class="col">New</div>
+                </div>
+                <div class="compare-row">
+                    <div class="col">Messaging Channels</div>
+                    <div class="col vb">✓ 6 Apps</div>
+                    <div class="col">✗</div>
+                    <div class="col">✗</div>
+                    <div class="col">✗</div>
+                    <div class="col">Slack</div>
+                </div>
+                <div class="compare-row">
+                    <div class="col">Smart Home</div>
+                    <div class="col vb">✓</div>
+                    <div class="col">✗</div>
+                    <div class="col">✗</div>
+                    <div class="col">✗</div>
+                    <div class="col">✗</div>
                 </div>
                 <div class="compare-row highlight">
                     <div class="col">Starting Price</div>
                     <div class="col vb green">Free</div>
-                    <div class="col">$8/mo</div>
                     <div class="col">$20/mo</div>
-                    <div class="col">$20/mo</div>
+                    <div class="col">$15/mo</div>
+                    <div class="col">$10/mo</div>
+                    <div class="col">$500/mo</div>
                 </div>
             </div>
         </div>
@@ -355,16 +615,16 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <p>"Finally, an AI that works while I sleep. Set up a deployment agent before bed, woke up to a PR ready for review."</p>
-                    <div class="author"><div class="avatar">SK</div><div><strong>Sarah Kim</strong><span>Senior Engineer @ Stripe</span></div></div>
+                    <p>"I set up a pipeline to refactor our auth module at 11pm. Woke up to a clean PR with all tests passing. This thing is unreal."</p>
+                    <div class="author"><div class="avatar">AK</div><div><strong>Arjun K.</strong><span>Staff Engineer @ Fintech Startup</span></div></div>
                 </div>
                 <div class="testimonial featured">
-                    <p>"The privacy angle sold me. I work on sensitive codebases—can't send that to the cloud. VaultBot with Ollama is perfect."</p>
-                    <div class="author"><div class="avatar">JC</div><div><strong>James Chen</strong><span>CTO @ Stealth Startup</span></div></div>
+                    <p>"We handle medical data — can't send code to the cloud. SupaDev with Ollama running locally is the only AI dev tool we trust. The Intelligent Mode routing saves us hundreds per month."</p>
+                    <div class="author"><div class="avatar">LS</div><div><strong>Laura S.</strong><span>CTO @ HealthTech</span></div></div>
                 </div>
                 <div class="testimonial">
-                    <p>"Approving git pushes from my iPhone while at dinner. My wife thinks I'm checking notifications. I'm deploying to prod. 😅"</p>
-                    <div class="author"><div class="avatar">MR</div><div><strong>Mike Rodriguez</strong><span>Indie Hacker</span></div></div>
+                    <p>"Approved a production deploy from my iPhone at a restaurant. My co-founder thinks I was checking Instagram. I was shipping. 🚀"</p>
+                    <div class="author"><div class="avatar">DP</div><div><strong>Dev P.</strong><span>Indie Hacker</span></div></div>
                 </div>
             </div>
         </div>
@@ -374,17 +634,17 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-label">Pricing</div>
-            <h2>Simple pricing.<br><span class="gradient">Powerful features.</span></h2>
+            <h2>Simple pricing.<br><span class="gradient">No surprises.</span></h2>
             
             <div class="pricing-cards">
                 <div class="price-card">
                     <h3>Free</h3>
-                    <p class="price-desc">For getting started</p>
+                    <p class="price-desc">Get started, no credit card</p>
                     <div class="price">$0 <span>forever</span></div>
                     <ul>
-                        <li>✓ Global hotkey launcher</li>
+                        <li>✓ Full native IDE</li>
                         <li>✓ 50 AI messages/day</li>
-                        <li>✓ 3 autonomous agents</li>
+                        <li>✓ 3 agent pipelines</li>
                         <li>✓ Local AI (Ollama)</li>
                         <li>✓ 100 built-in skills</li>
                     </ul>
@@ -395,14 +655,15 @@
                     <div class="popular">Most Popular</div>
                     <h3>Pro</h3>
                     <p class="price-desc">For serious developers</p>
-                    <div class="price">$9 <span>/month</span></div>
+                    <div class="price">$12 <span>/month</span></div>
                     <ul>
                         <li>✓ Everything in Free</li>
                         <li>✓ <strong>Unlimited</strong> AI messages</li>
-                        <li>✓ <strong>Unlimited</strong> agents</li>
-                        <li>✓ Claude, GPT-4, Gemini</li>
+                        <li>✓ <strong>Unlimited</strong> agent pipelines</li>
+                        <li>✓ Intelligent Mode (8 providers)</li>
                         <li>✓ All 3,800+ skills</li>
                         <li>✓ iOS companion app</li>
+                        <li>✓ All messaging channels</li>
                         <li>✓ Priority support</li>
                     </ul>
                     <a href="#download" class="btn-primary btn-full">Start 14-Day Trial</a>
@@ -410,13 +671,13 @@
                 
                 <div class="price-card">
                     <h3>Lifetime</h3>
-                    <p class="price-desc">One-time purchase</p>
-                    <div class="price">$149 <span>once</span></div>
+                    <p class="price-desc">One-time, own it forever</p>
+                    <div class="price">$199 <span>once</span></div>
                     <ul>
                         <li>✓ Everything in Pro</li>
                         <li>✓ Lifetime updates</li>
                         <li>✓ Early access features</li>
-                        <li>✓ Direct Slack support</li>
+                        <li>✓ Direct support channel</li>
                         <li>✓ Name in credits</li>
                     </ul>
                     <a href="#download" class="btn-secondary btn-full">Get Lifetime</a>
@@ -428,23 +689,23 @@
     <!-- Download -->
     <section id="download" class="download">
         <div class="container">
-            <h2>Ready to work smarter?</h2>
-            <p>Download VaultBot and experience AI that actually helps.</p>
+            <h2>Ready to build faster?</h2>
+            <p>Download SupaDev and put an AI dev team on your Mac.</p>
             
             <div class="download-buttons">
-                <a href="https://github.com/vaultbot/vaultbot/releases/latest" class="download-btn">
+                <a href="https://github.com/Madhurr/vaultbot/releases/latest" class="download-btn">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                     <div><span>Download for</span><strong>macOS</strong></div>
                 </a>
-                <a href="https://apps.apple.com/app/vaultbot" class="download-btn">
+                <a href="https://apps.apple.com/app/supadev" class="download-btn">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    <div><span>Download for</span><strong>iOS</strong></div>
+                    <div><span>Get the</span><strong>iOS App</strong></div>
                 </a>
             </div>
             
             <div class="homebrew">
                 <span>Or install via Homebrew:</span>
-                <code>brew install --cask vaultbot</code>
+                <code>brew install --cask supadev</code>
             </div>
         </div>
     </section>
@@ -454,38 +715,39 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><div class="logo-icon">V</div><span>VaultBot</span></a>
-                    <p>Your AI. Your Rules. Your Vault.</p>
+                    <a href="#" class="logo"><div class="logo-icon">S</div><span>SupaDev</span></a>
+                    <p>Your AI Dev Team. On Your Mac.</p>
                     <div class="social">
-                        <a href="https://twitter.com/vaultbot" target="_blank">Twitter</a>
-                        <a href="https://github.com/vaultbot/vaultbot" target="_blank">GitHub</a>
-                        <a href="https://discord.gg/vaultbot" target="_blank">Discord</a>
+                        <a href="https://twitter.com/supadev" target="_blank">Twitter</a>
+                        <a href="https://github.com/Madhurr/vaultbot" target="_blank">GitHub</a>
+                        <a href="https://discord.gg/supadev" target="_blank">Discord</a>
                     </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
                         <h4>Product</h4>
                         <a href="#features">Features</a>
-                        <a href="#agents">Agents</a>
+                        <a href="#ide">IDE</a>
+                        <a href="#pipelines">Pipelines</a>
                         <a href="#pricing">Pricing</a>
-                        <a href="https://github.com/vaultbot/vaultbot/releases" target="_blank">Changelog</a>
+                        <a href="https://github.com/Madhurr/vaultbot/releases" target="_blank">Changelog</a>
                     </div>
                     <div class="footer-col">
                         <h4>Resources</h4>
                         <a href="https://docs.vaultbot.ai" target="_blank">Documentation</a>
-                        <a href="https://github.com/vaultbot/skills" target="_blank">Skills Store</a>
+                        <a href="https://github.com/Madhurr/vaultbot" target="_blank">Skills Store</a>
                         <a href="https://docs.vaultbot.ai/api" target="_blank">API</a>
                     </div>
                     <div class="footer-col">
                         <h4>Legal</h4>
-                        <a href="https://vaultbot.ai/privacy" target="_blank">Privacy</a>
-                        <a href="https://vaultbot.ai/terms" target="_blank">Terms</a>
-                        <a href="https://vaultbot.ai/security" target="_blank">Security</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 VaultBot. All rights reserved.</p>
+                <p>© 2026 SupaDev. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -520,7 +782,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.feature-card, .testimonial, .price-card, .sec-card, .af-item').forEach(el => {
+        document.querySelectorAll('.feature-card, .testimonial, .price-card, .sec-card, .af-item, .pipeline-stage, .ide-feature, .intel-step').forEach(el => {
             observer.observe(el);
         });
     </script>
